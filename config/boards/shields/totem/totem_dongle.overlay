@@ -11,16 +11,14 @@
         zmk,kscan = &mock_kscan;
         zephyr,display = &oled;
     };
+
+    mock_kscan: kscan_1 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
 };
- &kscan0 {
-     col-gpios
-         = <&xiao_d 8 GPIO_ACTIVE_HIGH>
-         , <&xiao_d 9 GPIO_ACTIVE_HIGH>
-         , <&xiao_d 10 GPIO_ACTIVE_HIGH>
-         , <&xiao_d 5 GPIO_ACTIVE_HIGH>
-         , <&xiao_d 4 GPIO_ACTIVE_HIGH>
-         ;
- };
 
 // 128x64 OLED
 &xiao_i2c {
