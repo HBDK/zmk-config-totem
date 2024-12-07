@@ -16,7 +16,6 @@
          ;
  };
 
-/*
 // 128x64 OLED
 &xiao_i2c {
     status = "okay";
