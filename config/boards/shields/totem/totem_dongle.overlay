@@ -6,6 +6,12 @@
 
  #include "totem.dtsi"
 
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+        zephyr,display = &oled;
+    };
+};
  &kscan0 {
      col-gpios
          = <&xiao_d 8 GPIO_ACTIVE_HIGH>
