@@ -16,8 +16,8 @@
 #include <dt-bindings/zmk/outputs.h>
 #define BASE 0
 #define NAV  1
-#define SYM  2
-#define ADJ  3
+#define FS  2
+#define NMP  3
 #define TVP1 4
 #define TVP2 5
 
@@ -62,7 +62,7 @@ label= "BASE"                              ;
                 &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
                 &mt LALT A  &mt LGUI S  &mt LCTRL D &mt LSHFT F &kp G           &kp H       &mt RSHFT J &mt RCTRL K &mt RGUI L  &mt RALT SEMI
     &kp MINUS   &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp BSLH
-                                        &kp DEL     &lt ADJ TAB  &lt NAV BSPC   &lt SYM SPACE  &lt TVP1 ESC   &kp RET
+                                        &kp DEL     &lt NMP TAB  &lt NAV BSPC   &lt FS SPACE  &lt TVP1 ESC   &kp RET
                         >;
                 };
 
@@ -95,9 +95,9 @@ label= "NAVI"                              ;
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-                sim_layer {
+                f_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "Fs & []"                               ;
+label= "Fn[]"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃     F1    ┃     F2    ┃     F3    ┃     F4    ┃     F5    ┃   ┃     F6    ┃     F7    ┃     F8    ┃     F9    ┃     F0    ┃
@@ -138,9 +138,9 @@ label= "NUMP"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &sys_reset  &bt BT_CLR &out OUT_TOG &trans      &kp KP_NLCK     &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_SLASH    &kp KP_PLUS
-                &bootloader &bt BT_NXT  &trans      &trans      &tog BASE       &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_MULTIPLY &kp KP_COMMA  
-    &trans      &trans      &bt BT_PRV  &trans      &trans      &tog ADJ        &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_DOT      &kp KP_ENTER     &trans         
-                                        &trans      &trans      &trans          &trans      &kp KP_N0   &trans      
+                &bootloader &bt BT_NXT  &trans      &trans      &to BASE        &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_MULTIPLY &kp KP_COMMA
+    &trans      &trans      &bt BT_PRV  &trans      &trans      &to NMP         &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_DOT      &kp KP_ENTER     &trans
+                                        &trans      &trans      &trans          &trans      &kp KP_N0   &trans
                         >;
                 };
 
