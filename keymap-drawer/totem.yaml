@@ -94,7 +94,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - MUTE
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -121,7 +121,7 @@ layers:
   - '&sys_reset'
   - BT CLR
   - OUT TOG
-  - {t: ▽, type: trans}
+  - MUTE
   - KP NLCK
   - KP 7
   - KP 8
@@ -130,8 +130,8 @@ layers:
   - KP PLUS
   - '&bootloader'
   - BT NXT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - PP
+  - VOL UP
   - {t: BASE, h: toggle}
   - KP 4
   - KP 5
@@ -141,8 +141,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BT PRV
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - NEXT
+  - VOL DN
   - {t: NUMP, h: toggle}
   - KP 1
   - KP 2
