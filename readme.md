@@ -28,3 +28,16 @@ TOTEM is a 38 key column-staggered split keyboard running [ZMK](https://zmk.dev/
 - the keyboard should now appear as a mass storage device
 - drag'n'drop the `totem_left-seeeduino_xiao_ble-zmk.uf2` file from the archive onto the storage device
 - repeat this process with the right half and the `totem_right-seeeduino_xiao_ble-zmk.uf2` file.
+
+## Halcyon dongle
+
+This branch builds a display-free `totem_halcyon` firmware for the splitkb Halcyon Dongle,
+as well as the existing XIAO display dongle and both keyboard halves. It uses splitkb's
+ZMK fork and Halcyon module. Flash the Halcyon dongle and both halves with firmware from the
+same build; the dongle is the central and the two halves are peripherals.
+
+If the halves were paired with another central, follow ZMK's
+[split pairing reset procedure](https://zmk.dev/docs/troubleshooting/connection-issues#split-keyboard-parts-unable-to-pair).
+The build includes separate `settings_reset` firmware for the XIAO and Halcyon boards;
+use the appropriate image on each device, then reflash its normal firmware. This clears
+saved settings. Keep the other keyboard and dongle powered off while pairing.

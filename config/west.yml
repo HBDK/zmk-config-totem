@@ -1,14 +1,17 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+    - name: splitkb
+      url-base: https://github.com/splitkb
     - name: englmaxi
       url-base: https://github.com/englmaxi
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: splitkb
+      revision: main+halcyon-fixes
       import: app/west.yml
+    - name: zmk-halcyon-module
+      remote: splitkb
+      revision: main
     - name: zmk-dongle-display
       remote: englmaxi
       revision: main
